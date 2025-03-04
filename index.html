@@ -16,25 +16,25 @@
       --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       --transition: all 0.3s ease;
     }
-
+ 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
+ 
     body {
       background-color: var(--light-bg);
       color: var(--text-color);
       padding: 20px;
     }
-
+ 
     .container {
       max-width: 1400px;
       margin: 0 auto;
     }
-
+ 
     header {
       display: flex;
       justify-content: space-between;
@@ -46,19 +46,19 @@
       box-shadow: var(--card-shadow);
       color: var(--light-text);
     }
-
+ 
     h1 {
       font-size: 28px;
       font-weight: 700;
     }
-
+ 
     .stats-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
       margin-bottom: 30px;
     }
-
+ 
     .stat-card {
       background-color: white;
       border-radius: 10px;
@@ -68,24 +68,24 @@
       flex-direction: column;
       transition: var(--transition);
     }
-
+ 
     .stat-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
-
+ 
     .stat-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 15px;
     }
-
+ 
     .stat-title {
       font-size: 18px;
       font-weight: 600;
     }
-
+ 
     .employee-count {
       background-color: var(--light-bg);
       padding: 5px 10px;
@@ -97,12 +97,12 @@
       display: inline-block;
       margin-top: 10px;
     }
-
+ 
     .employee-count:hover {
       background-color: var(--accent-color);
       color: white;
     }
-
+ 
     .employee-list {
       margin-top: 15px;
       display: none;
@@ -111,7 +111,7 @@
       max-height: 250px;
       overflow-y: auto;
     }
-
+ 
     .employee-item {
       display: flex;
       align-items: center;
@@ -121,11 +121,11 @@
       cursor: pointer;
       transition: var(--transition);
     }
-
+ 
     .employee-item:hover {
       background-color: #e9ecef;
     }
-
+ 
     .employee-avatar {
       width: 30px;
       height: 30px;
@@ -139,18 +139,18 @@
       margin-right: 10px;
       font-size: 12px;
     }
-
+ 
     .employee-details {
       flex-grow: 1;
     }
-
+ 
     .employee-bandwidth {
       display: none;
       margin-top: 5px;
       padding: 5px 0;
       border-top: 1px dashed #ddd;
     }
-
+ 
     /* Employee Project Table Styles */
     .employee-table-container {
       margin: 40px 0;
@@ -159,39 +159,39 @@
       border-radius: 10px;
       box-shadow: var(--card-shadow);
     }
-
+ 
     .employee-table-container h2 {
       margin-bottom: 20px;
       color: var(--primary-color);
       text-align: center;
     }
-
+ 
     table {
       width: 100%;
       border-collapse: collapse;
     }
-
+ 
     table th,
     table td {
       padding: 12px;
       text-align: left;
       border-bottom: 1px solid #ddd;
     }
-
+ 
     table th {
       background-color: #007bff;
       color: white;
       text-transform: uppercase;
     }
-
+ 
     table tr:nth-child(even) {
       background-color: #f9f9f9;
     }
-
+ 
     table tr:hover {
       background-color: #f1f1f1;
     }
-
+ 
     /* Modal styles */
     .modal {
       display: none;
@@ -205,7 +205,7 @@
       justify-content: center;
       z-index: 1000;
     }
-
+ 
     .modal-content {
       background-color: white;
       border-radius: 10px;
@@ -215,7 +215,7 @@
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
       position: relative;
     }
-
+ 
     .close-modal {
       position: absolute;
       top: 15px;
@@ -223,7 +223,7 @@
       font-size: 22px;
       cursor: pointer;
     }
-
+ 
     /* Responsive design */
     @media (max-width: 768px) {
       .stats-container {
@@ -237,14 +237,14 @@
     <header>
       <h1>Resource Planner Dashboard</h1>
       <div class="date-info">
-        <h1>Employee Count : 47 </h1>
+        <h1>Employee Count : 49 </h1>
       </div>
     </header>
-
+ 
     <div class="stats-container" id="projects-container">
       <!-- Project cards will be added here by JavaScript -->
     </div>
-
+ 
     <!-- Employee Project Table Dashboard -->
     <div class="employee-table-container">
         <div class="table-header">
@@ -259,7 +259,7 @@
       font-family: Arial, sans-serif;
       margin: 20px;
     }
-    
+   
     table {
       width: 100%;
       border-collapse: collapse;
@@ -270,8 +270,8 @@
   color: #666;
   margin-left: 10px;
 }
-
-    
+ 
+   
     th {
       background-color: #f2f2f2;
       padding: 12px;
@@ -279,16 +279,16 @@
       border: 1px solid #ddd;
       font-weight: 600;
     }
-    
+   
     td {
       padding: 10px;
       border: 1px solid #ddd;
     }
-    
+   
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
-    
+   
     .pill {
       display: inline-block;
       border-radius: 20px;
@@ -297,26 +297,26 @@
       text-align: center;
       font-weight: 500;
     }
-    
+   
     .onshore {
       background-color: #e6f7ff;
       color: #0073b1;
       border: 1px solid #a6e1fa;
     }
-    
+   
     .offshore {
       background-color: #f0f4ff;
       color: #5c7cfa;
       border: 1px solid #bac8ff;
     }
-
+ 
     .employee-table-container .table-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-
+ 
 .employee-table-container .table-header input {
   padding: 8px 12px;
   font-size: 16px;
@@ -362,7 +362,7 @@
         <td></td>
         <td><span class="pill offshore">Offshore</span></td>
       </tr>
-      
+     
       <tr>
         <td>4</td>
         <td><b>Bharath Vishal</b></td>
@@ -455,7 +455,7 @@
         <td>15</td>
         <td>Devansh Sahu</td>
         <td>Predictive Maintenance Analytics</td>
-        <td></td>
+        <td>ODAI</td>
         <td></td>
         <td><span class="pill offshore">Offshore</span></td>
       </tr>
@@ -471,7 +471,7 @@
         <td>17</td>
         <td>Rohit Rewapati</td>
         <td>Predictive Maintenance Analytics</td>
-        <td></td>
+        <td>ODAI</td>
         <td></td>
         <td><span class="pill offshore">Offshore</span></td>
       </tr>
@@ -651,7 +651,7 @@
         <td></td>
         <td><span class="pill offshore">Offshore</span></td>
       </tr>
-      
+     
       <tr>
         <td>40</td>
         <td>Juhi Saxena</td>
@@ -684,8 +684,30 @@
         <td></td>
         <td><span class="pill offshore">Offshore</span></td>
       </tr>
+      <td>44</td>
+        <td>Rashmi Kolhe</td>
+        <td>ODAI</td>
+        <td></td>
+        <td></td>
+        <td><span class="pill offshore">Offshore</span></td>
+      </tr>
+      <td>45</td>
+        <td>Yatharth Singhai</td>
+        <td>ODAI</td>
+        <td></td>
+        <td></td>
+        <td><span class="pill offshore">Offshore</span></td>
+      </tr>
       <tr>
-        <td>44</td>
+        <td>46</td>
+        <td>Aditi Rajput</td>
+        <td>ODAI</td>
+        <td></td>
+        <td></td>
+        <td><span class="pill offshore">Offshore</span></td>
+      </tr>
+      <tr>
+        <td>46</td>
         <td>Rishabh Raghuvanshi</td>
         <td>Scala Exploration</td>
         <td></td>
@@ -693,21 +715,21 @@
         <td><span class="pill offshore">Offshore</span></td>
       </tr>
       <tr>
-        <td>45</td>
+        <td>47</td>
         <td><b>Rakesh Bejjani</b></td>
         <td>Smart Contracts</td>
         <td></td>
         <td></td>
         <td><span class="pill onshore">Onshore</span></td>
       </tr>
-      <td>46</td>
+      <td>48</td>
         <td><b>Kunal</b></td>
         <td>Smart Contracts</td>
         <td></td>
         <td></td>
         <td><span class="pill onshore">Onshore</span></td>
       </tr>
-      <td>47</td>
+      <td>49</td>
         <td><b>Shagun</b></td>
         <td>Smart Contracts</td>
         <td></td>
@@ -720,7 +742,7 @@
 </html>
     </div>
   </div>
-
+ 
   <!-- Modal for detailed employee view -->
   <div class="modal" id="employee-modal">
     <div class="modal-content">
@@ -731,9 +753,9 @@
       </div>
     </div>
   </div>
-
+ 
   <script>
-
+ 
 document.getElementById("searchInput").addEventListener("keyup", function () {
   const filter = this.value.toLowerCase();
   const rows = document.querySelectorAll(".employee-table-container table tbody tr");
@@ -742,7 +764,7 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
     row.style.display = row.textContent.toLowerCase().includes(filter) ? "" : "none";
   });
 });
-
+ 
     // Sample data for projects, supervisors, and employees
     const projects = [
       {
@@ -757,10 +779,10 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
         ],
         colorClass: "project-color-1",
         employees: [
-          { name: "Devansh Sahu",  bandwidth: 100 },
+          { name: "Devansh Sahu",  bandwidth: 20 },
           { name: "Devesh Rajwani",  bandwidth: 60 },
           { name: "Naman Sahu",  bandwidth: 20 },
-          { name: "Rohit Rewapati",  bandwidth: 100 },
+          { name: "Rohit Rewapati",  bandwidth: 80 },
           { name: "Shreet Pathrikar",  bandwidth: 100 },
           { name: "Arjun Nimbark",  bandwidth: 20 },
           { name: "Dipanshu Rautela",  bandwidth: 100 },
@@ -849,7 +871,7 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
           { name: "Mohini Sharma",  bandwidth: 20 },
           { name: "Tanisha Raghuwanshi",  bandwidth: 100 }
         ],
-        status: "active" 
+        status: "active"
       },
       {
         id: 7,
@@ -872,7 +894,7 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
         employees: [
           { name: "Juhi Saxena",  bandwidth: 80 },
           { name: "Khush Agrawal",  bandwidth: 20 },
-          { name: "Harshraj Singh Chouhan",  bandwidth: 20 }
+          { name: "Harshraj Singh Chouhan",  bandwidth: 80 }
         ],
         status: "active"
       },
@@ -910,24 +932,34 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
       },
       {
         id: 12,
-        name: "BI Analyst",
+        name: "ODAI",
         supervisors: [{ name: "Sachin Sinkar", title: "Senior Engineer" }],
         colorClass: "project-color-5",
-        employees: [{ name: "Shivangi Rathore", bandwidth: 100 }],
+        employees: [
+          { name: "Shivangi Rathore", bandwidth: 100 },
+          { name: "Rashmi Kolhe", bandwidth: 100 },
+          { name: "Yatharth Singhai", bandwidth: 100 },
+          { name: "Devansh Sahu", bandwidth: 80 },
+          { name: "Rohit Rewapati", bandwidth: 20 },
+          { name: "Aditi Rajput", bandwidth: 100 },
+ 
+ 
+        ],
         status: "active"
-      }
+      },
+     
     ];
-
+ 
     // Generate project cards (for the stats container)
     function generateProjectCards() {
   const projectsContainer = document.getElementById("projects-container");
   projectsContainer.innerHTML = "";
-
+ 
   projects.forEach((project) => {
     const projectCard = document.createElement("div");
     projectCard.className = "stat-card";
     projectCard.id = `project-${project.id}`;
-
+ 
     projectCard.innerHTML = `
       <div class="stat-header">
         <div class="stat-title">${project.name}</div>
@@ -959,17 +991,17 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
     projectsContainer.appendChild(projectCard);
   });
 }
-
+ 
     // Initialize the dashboard
     function initDashboard() {
       generateProjectCards();
-
+ 
       // Toggle employee list on employee count click
       document.querySelectorAll(".employee-count").forEach((button) => {
         button.addEventListener("click", function () {
           const projectId = this.dataset.project;
           const employeeList = document.getElementById(`employees-${projectId}`);
-
+ 
           if (employeeList.style.display === "flex") {
             employeeList.style.display = "none";
           } else {
@@ -980,7 +1012,7 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
           }
         });
       });
-
+ 
       // Toggle bandwidth info on employee item click
     //   document.querySelectorAll(".employee-item").forEach((item) => {
     //     item.addEventListener("click", function () {
@@ -995,14 +1027,14 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
     //       }
     //     });
     //   });
-
+ 
       // Modal close button for employee details
       document.querySelectorAll(".close-modal").forEach((button) => {
         button.addEventListener("click", function () {
           document.getElementById("employee-modal").style.display = "none";
         });
       });
-
+ 
       // Close modal when clicking outside the employee modal
       window.addEventListener("click", function (event) {
         const employeeModal = document.getElementById("employee-modal");
@@ -1011,7 +1043,7 @@ document.getElementById("searchInput").addEventListener("keyup", function () {
         }
       });
     }
-
+ 
     window.addEventListener("DOMContentLoaded", initDashboard);
   </script>
 </body>
